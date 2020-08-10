@@ -3,6 +3,7 @@
   "version": "1.5.10",
   "description": "Blue Button CCDA Generator.",
   "main": "./index.js",
+  "publishConfig": { "registry": "https://registry.npmjs.org/" },
   "browser": {
     "./lib/xmlutil.js": "./browser/lib/xmlutil.js"
   },
@@ -40,7 +41,8 @@
     "url": "https://github.com/pyetti/cs-blue-button-generate"
   },
   "keywords": [
-    "bluebutton"
+    "bluebutton",
+    "CCDA"
   ],
   "homepage": "https://github.com/pyetti/cs-blue-button-generate"
 }
