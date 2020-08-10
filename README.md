@@ -1,34 +1,24 @@
 blue-button-generate
 ====================
-This version was forked from Amida Tech and modified to update dependencies and add additional templates i.e Author support.
+This is a forked version from [OpenEMR oe-blue-button-generate](https://github.com/openemr/oe-blue-button-generate)
 Blue Button CCDA Generator
 
-npm i oe-blue-button-generate
+npm i cs-blue-button-generate
 
-blue-button-generate is a module to generate CCDA files from JSON data.  Currently it only supports [blue-button](https://github.com/amida-tech/blue-button) JSON data model.
+blue-button-generate is a module to generate CCDA files from JSON data.  Currently, it only supports [blue-button](https://github.com/amida-tech/blue-button) JSON data model.
 
 ## Usage
 
 ``` javascript
-var fs = require('fs');
-var bb = require('blue-button');
-var bbg = require('blue-button-generate');
-
-var xmlString = fs.readFileSync('test/fixtures/files/ccda_xml/CCD_1.xml', 'utf-8');
-var record = bb.parseString(xmlString);
-
-// ...
-// changes to record
-// ...
-
-// get back xml as text
-var updatedXmlString = bbg.generateCCD(record);
-
+const json = {...};
+const xml = BlueButtonGenerate.generateCCD(json, {
+    preventNullFlavor: false
+});
 ```
 
 ## Implementation
 
-blue-button-generate uses javascript template objects for implementation.  Each template in CCDA is represented with an object. As an example Reaction Observation object is shown
+blue-button-generate uses javascript template objects for implementation.  Each template in CCDA is represented with an object. As an example, Reaction Observation object is shown
 ``` javascript
 var reactionObservation = exports.reactionObservation = {
     key: "observation",
