@@ -1,7 +1,6 @@
 blue-button-generate
 ====================
-This is a forked version from [OpenEMR oe-blue-button-generate](https://github.com/openemr/oe-blue-button-generate)
-Blue Button CCDA Generator
+This is a forked version from [OpenEMR Blue Button CCDA Generator](https://github.com/openemr/oe-blue-button-generate)
 
 npm i cs-blue-button-generate
 
