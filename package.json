@@ -14,20 +14,12 @@
   "author": "Dmitry Kachaev <dmitry@amida-tech.com>",
   "contributors": [
     {
-      "name": "Matthew McCall",
-      "email": "matt@amida-tech.com"
+      "name": "Peter Yetti",
+      "email": "pyetti@clearsense.com"
     },
     {
-      "name": "Afsin Ustundag",
-      "email": "afsin.ustundag@us.pwc.com"
-    },
-    {
-      "name": "Matt Martz",
-      "email": "matt.martz@amida-tech.com"
-    },
-    {
-      "name": "Jerry Padgett",
-      "email": "sjpadgett@gmail.com"
+      "name": "Eric Clarke",
+      "email": "eclarke@clearsense.com"
     }
   ],
   "license": "Apache-2.0",
