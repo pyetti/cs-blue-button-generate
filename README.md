@@ -70,4 +70,4 @@ The following are the properties of the templates
 * `dataKey`: This is the property of `input` that serves as the data for the template.
 * `required`: This identifies if template is required or not.  If template is required and there is not value in the `input` a `nullFlavor` node is created.
 * `dataTransform`: This is a function to transform the input.
-* `existWhen`: This is a boolean function with `input` argument to describe it the elements should exists or not.
+* `existWhen`: This is a boolean function with `input` argument to describe if the elements should exists or not.
