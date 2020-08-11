@@ -5,31 +5,31 @@ This script converts CCDA data in JSON format (originally generated from a Conti
 standard XML/CCDA format) back to XML/CCDA format.
 */
 
-var bbu = require("blue-button-util");
+const bbu = require("blue-button-util");
 
-var engine = require('./lib/engine');
-var documentLevel = require('./lib/documentLevel');
+const engine = require('./lib/engine');
+const documentLevel = require('./lib/documentLevel');
 
-var bbuo = bbu.object;
+const bbuo = bbu.object;
 
-var html_renderer = require('./lib/htmlHeaders');
+const html_renderer = require('./lib/htmlHeaders');
 
-var createContext = (function () {
-    var base = {
+const createContext = (function () {
+    const base = {
         nextReference: function (referenceKey) {
-            var index = this.references[referenceKey] || 0;
+            let index = this.references[referenceKey] || 0;
             ++index;
             this.references[referenceKey] = index;
             return "#" + referenceKey + index;
         },
         sameReference: function (referenceKey) {
-            var index = this.references[referenceKey] || 0;
+            const index = this.references[referenceKey] || 0;
             return "#" + referenceKey + index;
         }
     };
 
     return function (options) {
-        var result = Object.create(base);
+        const result = Object.create(base);
         result.references = {};
         if (options.meta && options.addUniqueIds) {
             result.rootId = bbuo.deepValue(options.meta, 'identifiers.0.identifier');
@@ -42,12 +42,12 @@ var createContext = (function () {
     };
 })();
 
-var generate = exports.generate = function (template, input, options) {
+const generate = exports.generate = function (template, input, options) {
     if (!options.html_renderer) {
         options.html_renderer = html_renderer;
     }
 
-    var context = createContext(options);
+    const context = createContext(options);
     return engine.create(documentLevel.ccd2(options.html_renderer), input, context);
 };
 
