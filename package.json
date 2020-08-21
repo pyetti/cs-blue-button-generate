@@ -1,9 +1,11 @@
 {
   "name": "cs-blue-button-generate",
-  "version": "1.5.11",
-  "description": "Blue Button CCDA Generator.",
+  "version": "1.5.12",
+  "description": "Blue Button CCDA XML Generator.",
   "main": "./index.js",
-  "publishConfig": { "registry": "https://registry.npmjs.org/" },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "browser": {
     "./lib/xmlutil.js": "./browser/lib/xmlutil.js"
   },
@@ -29,7 +31,6 @@
   },
   "bundleDependencies": true,
   "dependencies": {
-    "blue-button-meta": "1.5.0",
     "blue-button-util": "~1.5.0",
     "libxmljs": "^0.19.5",
     "moment": "~2.19.3",

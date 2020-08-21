@@ -52,9 +52,14 @@ const generate = exports.generate = function (template, input, options) {
 };
 
 exports.generateCCD = function (input, options) {
-    options = options || {};
-    options.meta = input.meta;
-    return generate(documentLevel.ccd, input, options);
+    try {
+        options = options || {};
+        options.meta = input.meta;
+        return generate(documentLevel.ccd, input, options);
+    } catch (e) {
+        console.log(e);
+        return {};
+    }
 };
 
 exports.fieldLevel = require("./lib/fieldLevel");
